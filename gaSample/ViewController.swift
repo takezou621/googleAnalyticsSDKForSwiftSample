@@ -13,6 +13,8 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        GAI.sharedInstance().defaultTracker.set(kGAIScreenName, value: "Home Screen")
+        GAI.sharedInstance().defaultTracker.send(GAIDictionaryBuilder.createScreenView().build())
     }
 
     override func didReceiveMemoryWarning() {
